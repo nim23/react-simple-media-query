@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-class MyComponent extends React.Component {
+class MediaQuery extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
@@ -53,8 +53,8 @@ class MyComponent extends React.Component {
     }
 };
 
-MyComponent.propTypes = {
+MediaQuery.propTypes = {
     children: PropTypes.func.isRequired
 }
 
-export default MyComponent;
+export default MediaQuery;

@@ -90,13 +90,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
     }
 
-    var MyComponent = function (_React$Component) {
-        _inherits(MyComponent, _React$Component);
+    var MediaQuery = function (_React$Component) {
+        _inherits(MediaQuery, _React$Component);
 
-        function MyComponent(props) {
-            _classCallCheck(this, MyComponent);
+        function MediaQuery(props) {
+            _classCallCheck(this, MediaQuery);
 
-            var _this = _possibleConstructorReturn(this, (MyComponent.__proto__ || Object.getPrototypeOf(MyComponent)).call(this, props));
+            var _this = _possibleConstructorReturn(this, (MediaQuery.__proto__ || Object.getPrototypeOf(MediaQuery)).call(this, props));
 
             _this.state = {
                 breakpoint: ''
@@ -106,7 +106,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             return _this;
         }
 
-        _createClass(MyComponent, [{
+        _createClass(MediaQuery, [{
             key: '_setupListeners',
             value: function _setupListeners() {
                 var _this2 = this;
@@ -162,16 +162,16 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             }
         }]);
 
-        return MyComponent;
+        return MediaQuery;
     }(_react2.default.Component);
 
     ;
 
-    MyComponent.propTypes = {
+    MediaQuery.propTypes = {
         children: _react.PropTypes.func.isRequired
     };
 
-    exports.default = MyComponent;
+    exports.default = MediaQuery;
 });
 
 },{"react":173}],2:[function(require,module,exports){
@@ -195,15 +195,16 @@ var App = function App() {
     return _react2.default.createElement(
         _index2.default,
         {
+            'x-small': '(max-width: 399px)',
             small: '(min-width: 400px) and (max-width: 719px)',
             medium: '(min-width: 720px) and (max-width: 1023px)',
             large: '(min-width: 1024px) and (max-width: 1239px)',
             'x-large': '(min-width: 1240px)' },
         function (breakpoint) {
             return _react2.default.createElement(
-                'div',
+                'span',
                 null,
-                breakpoint
+                breakpoint.toUpperCase()
             );
         }
     );

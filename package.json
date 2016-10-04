@@ -27,7 +27,7 @@
     "test": "npm run lint && npm run testonly",
     "test-watch": "npm run testonly -- --watch --watch-extensions js",
     "example-build": "npm run prepublish && ./node_modules/.bin/browserify ./example/example.js -o ./example/example.build.js -t [ babelify ]",
-    "example-server": "npm run example-build && ./node_modules/.bin/browser-sync start --server 'example'"
+    "example-server": "npm run example-build && ./node_modules/.bin/browser-sync start --server 'example' --files 'example'"
   },
   "devDependencies": {
     "babel-cli": "^6.6.4",
